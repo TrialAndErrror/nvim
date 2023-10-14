@@ -24,6 +24,7 @@
           ripgrep
           git
           lazygit
+	  fd
         ];
         modules = [
           ./config
