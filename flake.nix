@@ -33,6 +33,7 @@
         echo "Python devshell activated."
         echo "Running 3.11 with rg, git, lazygit."
         export XDG_CONFIG_HOME="${self}/config/"
+        nvim
         '';
       };
     });
