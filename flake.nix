@@ -17,8 +17,7 @@
       packages.fd = pkgs.fd;
       packages.neovim = pkgs.neovim;
       packages.lazygit = pkgs.lazygit;
-
-
+      packages.default = pkgs.neovim;
       devShells.default = pkgs.mkShell {
         buildInputs = with pkgs; [
           python311
@@ -26,11 +25,13 @@
           git
           lazygit
         ];
+        modules = [
+          ./config
+        ];
         shellHook = ''
         echo "Python devshell activated."
         echo "Running 3.11 with rg, git, lazygit."
-        export XDG_CONFIG_HOME="$(echo "$PWD")/config/"
-        echo "config located at $XDG_CONFIG_HOME"
+        export XDG_CONFIG_HOME="${self}/config/"
         '';
       };
     });
