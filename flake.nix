@@ -24,7 +24,8 @@
           ripgrep
           git
           lazygit
-	  fd
+          fd
+          nvim
         ];
         modules = [
           ./config
