@@ -25,7 +25,7 @@
           git
           lazygit
           fd
-          nvim
+          neovim
         ];
         modules = [
           ./config
